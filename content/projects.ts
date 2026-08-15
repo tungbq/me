@@ -177,4 +177,14 @@ export const projects: CuratedProject[] = [
     order: 17,
     tags: ["aws", "terraform", "cicd", "codepipeline"],
   },
+  {
+    repo: "challenges",
+    title: "Coding Challenges",
+    blurb:
+      "Solutions to structured LeetCode programs -- LeetCode 75, Top Interview Questions, and a handful of 14-day challenges -- kept in one repo with CODEOWNERS and scripts rather than scattered across one-off gists.",
+    category: "Practice",
+    featured: false,
+    order: 18,
+    tags: ["leetcode", "algorithms", "python"],
+  },
 ];

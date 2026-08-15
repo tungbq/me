@@ -54,7 +54,7 @@ export function TagCloud({
           type="button"
           aria-expanded={false}
           onClick={() => setExpanded(true)}
-          className="rounded-full border border-border px-2 py-0.5 text-xs text-muted transition-colors hover:text-foreground"
+          className="rounded-full border border-accent/40 px-2 py-0.5 text-xs font-medium text-accent transition-colors hover:border-accent hover:bg-accent/10"
         >
           +{hiddenCount} more
         </button>
@@ -64,7 +64,7 @@ export function TagCloud({
           type="button"
           aria-expanded={true}
           onClick={() => setExpanded(false)}
-          className="rounded-full border border-border px-2 py-0.5 text-xs text-muted transition-colors hover:text-foreground"
+          className="rounded-full border border-accent/40 px-2 py-0.5 text-xs font-medium text-accent transition-colors hover:border-accent hover:bg-accent/10"
         >
           Show less
         </button>

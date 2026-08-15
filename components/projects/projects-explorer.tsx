@@ -15,6 +15,10 @@ const SORT_LABEL: Record<SortBy, string> = {
   name: "Name (A–Z)",
 };
 
+// Three rows at the lg:grid-cols-3 breakpoint before the grid needs a
+// "Show more" -- keeps the initial view scannable as the curated list grows.
+const DEFAULT_VISIBLE_PROJECTS = 9;
+
 export function ProjectsExplorer({
   projects,
   categories,
@@ -31,6 +35,7 @@ export function ProjectsExplorer({
   const [language, setLanguage] = useState("All");
   const [selectedTopics, setSelectedTopics] = useState<string[]>([]);
   const [sortBy, setSortBy] = useState<SortBy>("default");
+  const [expandedProjects, setExpandedProjects] = useState(false);
 
   const fuse = useMemo(
     () =>
@@ -53,6 +58,11 @@ export function ProjectsExplorer({
 
   const hasActiveFilter =
     query !== "" || category !== "All" || language !== "All" || selectedTopics.length > 0;
+
+  const visibleProjects = expandedProjects
+    ? filtered
+    : filtered.slice(0, DEFAULT_VISIBLE_PROJECTS);
+  const hiddenProjectCount = filtered.length - visibleProjects.length;
 
   function toggleTopic(topic: string) {
     setSelectedTopics((current) =>
@@ -144,11 +154,37 @@ export function ProjectsExplorer({
           </button>
         </p>
       ) : (
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {filtered.map((project) => (
-            <ProjectCard key={project.repo} project={project} />
-          ))}
-        </div>
+        <>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {visibleProjects.map((project) => (
+              <ProjectCard key={project.repo} project={project} />
+            ))}
+          </div>
+          {!expandedProjects && hiddenProjectCount > 0 ? (
+            <div className="flex justify-center">
+              <button
+                type="button"
+                aria-expanded={false}
+                onClick={() => setExpandedProjects(true)}
+                className="rounded-md border border-accent/40 px-4 py-2 text-sm font-medium text-accent transition-colors hover:border-accent hover:bg-accent/10"
+              >
+                Show {hiddenProjectCount} more
+              </button>
+            </div>
+          ) : null}
+          {expandedProjects && filtered.length > DEFAULT_VISIBLE_PROJECTS ? (
+            <div className="flex justify-center">
+              <button
+                type="button"
+                aria-expanded={true}
+                onClick={() => setExpandedProjects(false)}
+                className="rounded-md border border-accent/40 px-4 py-2 text-sm font-medium text-accent transition-colors hover:border-accent hover:bg-accent/10"
+              >
+                Show less
+              </button>
+            </div>
+          ) : null}
+        </>
       )}
     </div>
   );

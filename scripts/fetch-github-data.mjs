@@ -19,6 +19,19 @@ function parseNextLink(linkHeader) {
   return null;
 }
 
+// Extracts total contributor count from the Link header of a `?per_page=1`
+// contributors request, without paginating through every contributor.
+// Falls back to the first page's length when there's no Link header (0 or 1
+// contributor total).
+export function parseContributorCount(linkHeader, firstPageLength) {
+  if (!linkHeader) return firstPageLength;
+  for (const part of linkHeader.split(",")) {
+    const match = part.match(/[?&]page=(\d+)>;\s*rel="last"/);
+    if (match) return Number(match[1]);
+  }
+  return firstPageLength;
+}
+
 export async function fetchAll(url, token) {
   const headers = {
     Accept: "application/vnd.github+json",
@@ -57,6 +70,33 @@ export function trimRepo(raw) {
     pushedAt: raw.pushed_at,
     archived: raw.archived ?? false,
   };
+}
+
+// Contributor count isn't in the single-repo API response trimRepo() reads,
+// so it's a separate per-repo call, kept out of trimRepo() to keep that
+// function pure/sync and its exact-shape test stable.
+export async function fetchContributorCount(owner, repo, token) {
+  const headers = {
+    Accept: "application/vnd.github+json",
+    "X-GitHub-Api-Version": "2022-11-28",
+  };
+  if (token) headers.Authorization = `token ${token}`;
+  try {
+    const res = await fetch(
+      `${API_BASE}/repos/${owner}/${repo}/contributors?per_page=1&anon=true`,
+      { headers }
+    );
+    if (!res.ok) return null; // degrade gracefully -- don't fail the whole build
+    const body = await res.json();
+    return parseContributorCount(
+      res.headers.get("link"),
+      Array.isArray(body) ? body.length : 0
+    );
+  } catch {
+    // Network/parse failure on one repo's contributor call must not revert
+    // the whole build's freshly-fetched data to stale cache -- degrade to null.
+    return null;
+  }
 }
 
 export function buildData(profileRaw, reposRaw, curated) {
@@ -116,6 +156,15 @@ export async function main() {
   );
 
   const data = buildData(profile, repos, curated);
+
+  // Sequential, not Promise.all -- ~17 calls, avoids GitHub secondary
+  // rate-limit bursts. Each curated repo is guaranteed present in data.repos
+  // (buildData already threw MissingCuratedRepoError otherwise).
+  for (const project of curated) {
+    const stats = data.repos[project.repo];
+    stats.contributors = await fetchContributorCount(GITHUB_USER, project.repo, token);
+  }
+
   writeFileSync(OUTPUT_PATH, JSON.stringify(data, null, 2) + "\n");
   console.warn(`wrote ${OUTPUT_PATH.pathname} (${curated.length} curated repos)`);
 }

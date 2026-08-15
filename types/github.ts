@@ -3,6 +3,7 @@ export interface RepoStats {
   description: string | null;
   stars: number;
   forks: number;
+  contributors: number | null;
   language: string | null;
   topics: string[];
   htmlUrl: string;

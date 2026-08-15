@@ -27,7 +27,8 @@
       ],
       "htmlUrl": "https://github.com/tungbq/AWSHub",
       "pushedAt": "2024-07-13T05:22:56Z",
-      "archived": false
+      "archived": false,
+      "contributors": 9
     },
     "Azure-DevOps-Pipeline": {
       "name": "Azure-DevOps-Pipeline",
@@ -38,7 +39,8 @@
       "topics": [],
       "htmlUrl": "https://github.com/tungbq/Azure-DevOps-Pipeline",
       "pushedAt": "2024-03-02T15:34:54Z",
-      "archived": false
+      "archived": false,
+      "contributors": 1
     },
     "K8sHub": {
       "name": "K8sHub",
@@ -49,7 +51,8 @@
       "topics": [],
       "htmlUrl": "https://github.com/tungbq/K8sHub",
       "pushedAt": "2024-07-30T16:34:56Z",
-      "archived": false
+      "archived": false,
+      "contributors": 1
     },
     "LocalEnv": {
       "name": "LocalEnv",
@@ -71,7 +74,8 @@
       ],
       "htmlUrl": "https://github.com/tungbq/LocalEnv",
       "pushedAt": "2024-05-22T23:50:11Z",
-      "archived": false
+      "archived": false,
+      "contributors": 2
     },
     "awesome-workflow": {
       "name": "awesome-workflow",
@@ -89,7 +93,8 @@
       ],
       "htmlUrl": "https://github.com/tungbq/awesome-workflow",
       "pushedAt": "2024-06-08T09:35:25Z",
-      "archived": false
+      "archived": false,
+      "contributors": 1
     },
     "aws-codepipeline-demo": {
       "name": "aws-codepipeline-demo",
@@ -100,7 +105,8 @@
       "topics": [],
       "htmlUrl": "https://github.com/tungbq/aws-codepipeline-demo",
       "pushedAt": "2023-12-12T15:22:29Z",
-      "archived": false
+      "archived": false,
+      "contributors": 1
     },
     "aws-lab-with-terraform": {
       "name": "aws-lab-with-terraform",
@@ -119,7 +125,8 @@
       ],
       "htmlUrl": "https://github.com/tungbq/aws-lab-with-terraform",
       "pushedAt": "2026-03-05T04:15:48Z",
-      "archived": false
+      "archived": false,
+      "contributors": 15
     },
     "cmd": {
       "name": "cmd",
@@ -138,7 +145,8 @@
       ],
       "htmlUrl": "https://github.com/tungbq/cmd",
       "pushedAt": "2026-01-03T09:50:30Z",
-      "archived": false
+      "archived": false,
+      "contributors": 1
     },
     "devops-basics": {
       "name": "devops-basics",
@@ -170,7 +178,8 @@
       ],
       "htmlUrl": "https://github.com/tungbq/devops-basics",
       "pushedAt": "2026-08-03T22:53:01Z",
-      "archived": false
+      "archived": false,
+      "contributors": 41
     },
     "devops-dockerfiles": {
       "name": "devops-dockerfiles",
@@ -188,7 +197,8 @@
       ],
       "htmlUrl": "https://github.com/tungbq/devops-dockerfiles",
       "pushedAt": "2024-08-26T02:53:43Z",
-      "archived": false
+      "archived": false,
+      "contributors": 3
     },
     "devops-practice": {
       "name": "devops-practice",
@@ -207,7 +217,8 @@
       ],
       "htmlUrl": "https://github.com/tungbq/devops-practice",
       "pushedAt": "2024-09-17T06:38:25Z",
-      "archived": false
+      "archived": false,
+      "contributors": 1
     },
     "devops-project": {
       "name": "devops-project",
@@ -230,7 +241,8 @@
       ],
       "htmlUrl": "https://github.com/tungbq/devops-project",
       "pushedAt": "2026-07-27T05:29:03Z",
-      "archived": false
+      "archived": false,
+      "contributors": 6
     },
     "devops-toolkit": {
       "name": "devops-toolkit",
@@ -256,8 +268,9 @@
         "terraform"
       ],
       "htmlUrl": "https://github.com/tungbq/devops-toolkit",
-      "pushedAt": "2026-08-11T15:20:21Z",
-      "archived": false
+      "pushedAt": "2026-08-15T09:03:12Z",
+      "archived": false,
+      "contributors": 9
     },
     "find-github-issue": {
       "name": "find-github-issue",
@@ -272,7 +285,8 @@
       ],
       "htmlUrl": "https://github.com/tungbq/find-github-issue",
       "pushedAt": "2024-10-19T04:17:11Z",
-      "archived": false
+      "archived": false,
+      "contributors": 6
     },
     "repos": {
       "name": "repos",
@@ -289,7 +303,8 @@
       ],
       "htmlUrl": "https://github.com/tungbq/repos",
       "pushedAt": "2024-08-15T16:55:58Z",
-      "archived": false
+      "archived": false,
+      "contributors": 2
     },
     "terraform-sample-project": {
       "name": "terraform-sample-project",
@@ -300,7 +315,8 @@
       "topics": [],
       "htmlUrl": "https://github.com/tungbq/terraform-sample-project",
       "pushedAt": "2023-12-09T04:03:34Z",
-      "archived": false
+      "archived": false,
+      "contributors": 1
     },
     "useful-tools": {
       "name": "useful-tools",
@@ -311,7 +327,8 @@
       "topics": [],
       "htmlUrl": "https://github.com/tungbq/useful-tools",
       "pushedAt": "2025-08-09T09:56:27Z",
-      "archived": false
+      "archived": false,
+      "contributors": 1
     }
   }
 }

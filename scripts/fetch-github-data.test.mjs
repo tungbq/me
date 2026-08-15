@@ -1,6 +1,13 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { fetchAll, trimRepo, buildData, MissingCuratedRepoError } from "./fetch-github-data.mjs";
+import {
+  fetchAll,
+  trimRepo,
+  buildData,
+  MissingCuratedRepoError,
+  parseContributorCount,
+  fetchContributorCount,
+} from "./fetch-github-data.mjs";
 
 test("buildData joins curated projects with live repo stats (happy path)", () => {
   const profile = {
@@ -118,6 +125,90 @@ test("fetchAll throws with status and rate-limit info on a non-2xx response", as
       () => fetchAll("https://api.example.com/repos", undefined),
       /403 Forbidden.*x-ratelimit-remaining=0/
     );
+  } finally {
+    globalThis.fetch = originalFetch;
+  }
+});
+
+test("parseContributorCount reads the last-page number from a Link header", () => {
+  const linkHeader =
+    '<https://api.example.com/repos/x/y/contributors?per_page=1&page=2>; rel="next", ' +
+    '<https://api.example.com/repos/x/y/contributors?per_page=1&page=42>; rel="last"';
+  assert.equal(parseContributorCount(linkHeader, 1), 42);
+});
+
+test("parseContributorCount falls back to the first page's length with no Link header", () => {
+  assert.equal(parseContributorCount(null, 1), 1);
+  assert.equal(parseContributorCount(null, 0), 0);
+});
+
+test("fetchContributorCount returns the parsed count on a successful response", async () => {
+  const originalFetch = globalThis.fetch;
+  globalThis.fetch = async (url) => {
+    assert.match(url, /\/repos\/tungbq\/devops-basics\/contributors\?per_page=1&anon=true$/);
+    return {
+      ok: true,
+      headers: {
+        get: (name) =>
+          name === "link"
+            ? '<https://api.example.com/x?page=37>; rel="last"'
+            : null,
+      },
+      json: async () => [{ login: "tungbq" }],
+    };
+  };
+
+  try {
+    const count = await fetchContributorCount("tungbq", "devops-basics", undefined);
+    assert.equal(count, 37);
+  } finally {
+    globalThis.fetch = originalFetch;
+  }
+});
+
+test("fetchContributorCount degrades to null on a non-2xx response instead of throwing", async () => {
+  const originalFetch = globalThis.fetch;
+  globalThis.fetch = async () => ({
+    ok: false,
+    headers: { get: () => null },
+    json: async () => ({}),
+  });
+
+  try {
+    const count = await fetchContributorCount("tungbq", "devops-basics", undefined);
+    assert.equal(count, null);
+  } finally {
+    globalThis.fetch = originalFetch;
+  }
+});
+
+test("fetchContributorCount degrades to null when fetch itself throws (network failure)", async () => {
+  const originalFetch = globalThis.fetch;
+  globalThis.fetch = async () => {
+    throw new Error("network unreachable");
+  };
+
+  try {
+    const count = await fetchContributorCount("tungbq", "devops-basics", undefined);
+    assert.equal(count, null);
+  } finally {
+    globalThis.fetch = originalFetch;
+  }
+});
+
+test("fetchContributorCount degrades to null when res.json() throws (malformed body)", async () => {
+  const originalFetch = globalThis.fetch;
+  globalThis.fetch = async () => ({
+    ok: true,
+    headers: { get: () => null },
+    json: async () => {
+      throw new Error("unexpected end of JSON input");
+    },
+  });
+
+  try {
+    const count = await fetchContributorCount("tungbq", "devops-basics", undefined);
+    assert.equal(count, null);
   } finally {
     globalThis.fetch = originalFetch;
   }

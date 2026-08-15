@@ -1,4 +1,4 @@
-import { Star, GitFork, Sparkles } from "lucide-react";
+import { Star, GitFork, Users, Sparkles } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import type { Project } from "@/types/github";
 
@@ -54,6 +54,13 @@ export function ProjectCard({ project }: { project: Project }) {
           {project.stats.forks}
           <span className="sr-only"> forks</span>
         </span>
+        {project.stats.contributors !== null ? (
+          <span className="inline-flex items-center gap-1">
+            <Users aria-hidden="true" className="h-3.5 w-3.5" />
+            {project.stats.contributors}
+            <span className="sr-only"> contributors</span>
+          </span>
+        ) : null}
         {project.stats.language ? <span>{project.stats.language}</span> : null}
       </div>
     </article>

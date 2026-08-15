@@ -4,6 +4,22 @@ import type { Project } from "@/types/github";
 export const SORT_OPTIONS = ["default", "updated", "stars", "name"] as const;
 export type SortBy = (typeof SORT_OPTIONS)[number];
 
+// Topics that describe more curated projects are more useful as filters
+// (narrow across several cards) than topics unique to one project. Sorted by
+// frequency desc, then alphabetically for a stable tiebreak.
+export function sortTopicsByFrequency(projects: Project[]): string[] {
+  const counts = new Map<string, number>();
+  for (const project of projects) {
+    for (const topic of project.stats.topics) {
+      counts.set(topic, (counts.get(topic) ?? 0) + 1);
+    }
+  }
+  return Array.from(counts.keys()).sort((a, b) => {
+    const diff = (counts.get(b) ?? 0) - (counts.get(a) ?? 0);
+    return diff !== 0 ? diff : a.localeCompare(b);
+  });
+}
+
 export interface FilterProjectsArgs {
   projects: Project[];
   query: string;

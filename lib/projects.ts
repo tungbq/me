@@ -1,6 +1,7 @@
 import data from "@/data/github.json";
 import { projects as curated } from "@/content/projects";
 import type { GithubData, Project, ProjectCategory } from "@/types/github";
+import { sortTopicsByFrequency } from "./filter-projects";
 
 const githubData = data as GithubData;
 
@@ -57,5 +58,5 @@ export function getLanguages(): string[] {
 }
 
 export function getTopics(): string[] {
-  return Array.from(new Set(allProjects.flatMap((p) => p.stats.topics))).sort();
+  return sortTopicsByFrequency(allProjects);
 }

@@ -9,7 +9,7 @@ export function FeaturedProjects({ projects }: { projects: Project[] }) {
   if (projects.length === 0) return null;
 
   return (
-    <section aria-labelledby="featured-heading" className="mx-auto max-w-5xl px-6 pt-12 pb-4">
+    <section aria-labelledby="featured-heading" className="mx-auto max-w-5xl px-6 pt-4 pb-4">
       <h2 id="featured-heading" className="text-2xl font-semibold text-foreground">
         {sections.featured.heading}
       </h2>

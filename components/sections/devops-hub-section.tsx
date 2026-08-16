@@ -17,7 +17,7 @@ export function DevopsHubSection() {
     <section
       id="devops-hub"
       aria-labelledby="devops-hub-heading"
-      className="mx-auto max-w-5xl px-6 py-12"
+      className="mx-auto max-w-5xl px-6 pt-4 pb-4"
     >
       <div className="rounded-xl border border-border bg-surface p-6 sm:p-8">
         <div className="flex flex-wrap items-start justify-between gap-4">

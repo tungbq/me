@@ -10,7 +10,7 @@ const CONTACT_LINKS = [
 
 export function ContactSection() {
   return (
-    <section id="contact" aria-labelledby="contact-heading" className="mx-auto max-w-5xl px-6 py-12">
+    <section id="contact" aria-labelledby="contact-heading" className="mx-auto max-w-5xl px-6 pt-4 pb-4">
       <h2 id="contact-heading" className="text-2xl font-semibold text-foreground">
         {contact.heading}
       </h2>

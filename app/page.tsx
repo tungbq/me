@@ -43,7 +43,7 @@ export default function Home() {
       <FeaturedProjects projects={featuredProjects} />
 
       <RevealOnScroll>
-        <section id="projects" aria-labelledby="projects-heading" className="mx-auto max-w-5xl px-6 pt-4 pb-12">
+        <section id="projects" aria-labelledby="projects-heading" className="mx-auto max-w-5xl px-6 pt-4 pb-4">
           <h2 id="projects-heading" className="text-2xl font-semibold text-foreground">
             {sections.projects.heading}
           </h2>

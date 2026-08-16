@@ -12,7 +12,7 @@ function countProjects(tagMatch: string[]): number {
 
 export function TechStackSection() {
   return (
-    <section id="stack" aria-labelledby="stack-heading" className="mx-auto max-w-5xl px-6 py-12">
+    <section id="stack" aria-labelledby="stack-heading" className="mx-auto max-w-5xl px-6 pt-4 pb-4">
       <h2 id="stack-heading" className="text-2xl font-semibold text-foreground">
         {sections.stack.heading}
       </h2>

@@ -20,7 +20,7 @@ export function GithubStatsSection({ projects }: { projects: Project[] }) {
   return (
     <section
       aria-labelledby="github-stats-heading"
-      className="mx-auto max-w-5xl px-6 py-12"
+      className="mx-auto max-w-5xl px-6 pt-4 pb-12"
     >
       <h2 id="github-stats-heading" className="text-2xl font-semibold text-foreground">
         {sections.languages.heading}

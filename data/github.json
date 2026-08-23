@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-08-16",
+  "generatedAt": "2026-08-23",
   "profile": {
     "login": "tungbq",
     "name": "Tung Leo",
     "avatarUrl": "https://avatars.githubusercontent.com/u/85242618?v=4",
     "followers": 270,
-    "publicRepos": 248,
-    "totalStars": 2354
+    "publicRepos": 250,
+    "totalStars": 2356
   },
   "repos": {
     "AWSHub": {
@@ -151,7 +151,7 @@
       "description": "A bookmark of essential commands for a software engineer's daily tasks :bookmark:",
       "stars": 30,
       "forks": 2,
-      "language": null,
+      "language": "CSS",
       "topics": [
         "bookmark",
         "cheatsheet",
@@ -162,15 +162,15 @@
         "note"
       ],
       "htmlUrl": "https://github.com/tungbq/cmd",
-      "pushedAt": "2026-01-03T09:50:30Z",
+      "pushedAt": "2026-08-20T07:14:13Z",
       "archived": false,
       "contributors": 1
     },
     "devops-basics": {
       "name": "devops-basics",
       "description": "🚀 Practical and document place for DevOps toolchain",
-      "stars": 1873,
-      "forks": 215,
+      "stars": 1874,
+      "forks": 213,
       "language": "HCL",
       "topics": [
         "ansible",
@@ -195,7 +195,7 @@
         "terraform"
       ],
       "htmlUrl": "https://github.com/tungbq/devops-basics",
-      "pushedAt": "2026-08-16T03:12:20Z",
+      "pushedAt": "2026-08-16T06:54:25Z",
       "archived": false,
       "contributors": 42
     },
@@ -242,7 +242,7 @@
       "name": "devops-project",
       "description": "Collection of DevOps projects to level up your DevOps skills",
       "stars": 102,
-      "forks": 47,
+      "forks": 48,
       "language": "HCL",
       "topics": [
         "aws",
@@ -286,7 +286,7 @@
         "terraform"
       ],
       "htmlUrl": "https://github.com/tungbq/devops-toolkit",
-      "pushedAt": "2026-08-15T09:03:12Z",
+      "pushedAt": "2026-08-19T16:38:53Z",
       "archived": false,
       "contributors": 9
     },

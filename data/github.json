@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-08-23",
+  "generatedAt": "2026-08-30",
   "profile": {
     "login": "tungbq",
     "name": "Tung Leo",
     "avatarUrl": "https://avatars.githubusercontent.com/u/85242618?v=4",
-    "followers": 270,
-    "publicRepos": 250,
-    "totalStars": 2356
+    "followers": 271,
+    "publicRepos": 251,
+    "totalStars": 2358
   },
   "repos": {
     "AWSHub": {
@@ -169,7 +169,7 @@
     "devops-basics": {
       "name": "devops-basics",
       "description": "🚀 Practical and document place for DevOps toolchain",
-      "stars": 1874,
+      "stars": 1876,
       "forks": 213,
       "language": "HCL",
       "topics": [
@@ -258,7 +258,7 @@
         "terraform"
       ],
       "htmlUrl": "https://github.com/tungbq/devops-project",
-      "pushedAt": "2026-07-27T05:29:03Z",
+      "pushedAt": "2026-08-30T05:27:09Z",
       "archived": false,
       "contributors": 6
     },
@@ -286,7 +286,7 @@
         "terraform"
       ],
       "htmlUrl": "https://github.com/tungbq/devops-toolkit",
-      "pushedAt": "2026-08-19T16:38:53Z",
+      "pushedAt": "2026-08-30T02:58:25Z",
       "archived": false,
       "contributors": 9
     },

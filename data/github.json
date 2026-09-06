@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-08-30",
+  "generatedAt": "2026-09-06",
   "profile": {
     "login": "tungbq",
     "name": "Tung Leo",
     "avatarUrl": "https://avatars.githubusercontent.com/u/85242618?v=4",
-    "followers": 271,
+    "followers": 273,
     "publicRepos": 251,
-    "totalStars": 2358
+    "totalStars": 2359
   },
   "repos": {
     "AWSHub": {
@@ -112,7 +112,7 @@
       "name": "aws-lab-with-terraform",
       "description": "Collection of Terraform code for AWS labs",
       "stars": 15,
-      "forks": 16,
+      "forks": 17,
       "language": "HCL",
       "topics": [
         "aws",
@@ -169,9 +169,9 @@
     "devops-basics": {
       "name": "devops-basics",
       "description": "🚀 Practical and document place for DevOps toolchain",
-      "stars": 1876,
-      "forks": 213,
-      "language": "HCL",
+      "stars": 1877,
+      "forks": 212,
+      "language": "Shell",
       "topics": [
         "ansible",
         "aws",
@@ -195,7 +195,7 @@
         "terraform"
       ],
       "htmlUrl": "https://github.com/tungbq/devops-basics",
-      "pushedAt": "2026-08-16T06:54:25Z",
+      "pushedAt": "2026-09-02T14:20:01Z",
       "archived": false,
       "contributors": 42
     },
@@ -258,7 +258,7 @@
         "terraform"
       ],
       "htmlUrl": "https://github.com/tungbq/devops-project",
-      "pushedAt": "2026-08-30T05:27:09Z",
+      "pushedAt": "2026-09-04T13:34:02Z",
       "archived": false,
       "contributors": 6
     },
@@ -286,7 +286,7 @@
         "terraform"
       ],
       "htmlUrl": "https://github.com/tungbq/devops-toolkit",
-      "pushedAt": "2026-08-30T02:58:25Z",
+      "pushedAt": "2026-08-31T19:14:49Z",
       "archived": false,
       "contributors": 9
     },

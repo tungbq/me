@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-09-06",
+  "generatedAt": "2026-09-13",
   "profile": {
     "login": "tungbq",
     "name": "Tung Leo",
     "avatarUrl": "https://avatars.githubusercontent.com/u/85242618?v=4",
-    "followers": 273,
+    "followers": 275,
     "publicRepos": 251,
-    "totalStars": 2359
+    "totalStars": 2362
   },
   "repos": {
     "AWSHub": {
@@ -80,7 +80,7 @@
     "awesome-workflow": {
       "name": "awesome-workflow",
       "description": ":octocat: Awesome lists about GitHub workflows to automate your development workflow",
-      "stars": 23,
+      "stars": 24,
       "forks": 1,
       "language": null,
       "topics": [
@@ -112,7 +112,7 @@
       "name": "aws-lab-with-terraform",
       "description": "Collection of Terraform code for AWS labs",
       "stars": 15,
-      "forks": 17,
+      "forks": 18,
       "language": "HCL",
       "topics": [
         "aws",
@@ -169,7 +169,7 @@
     "devops-basics": {
       "name": "devops-basics",
       "description": "🚀 Practical and document place for DevOps toolchain",
-      "stars": 1877,
+      "stars": 1880,
       "forks": 212,
       "language": "Shell",
       "topics": [
@@ -195,7 +195,7 @@
         "terraform"
       ],
       "htmlUrl": "https://github.com/tungbq/devops-basics",
-      "pushedAt": "2026-09-02T14:20:01Z",
+      "pushedAt": "2026-09-13T05:21:08Z",
       "archived": false,
       "contributors": 42
     },
@@ -241,7 +241,7 @@
     "devops-project": {
       "name": "devops-project",
       "description": "Collection of DevOps projects to level up your DevOps skills",
-      "stars": 102,
+      "stars": 101,
       "forks": 48,
       "language": "HCL",
       "topics": [
@@ -258,7 +258,7 @@
         "terraform"
       ],
       "htmlUrl": "https://github.com/tungbq/devops-project",
-      "pushedAt": "2026-09-04T13:34:02Z",
+      "pushedAt": "2026-09-13T08:36:00Z",
       "archived": false,
       "contributors": 6
     },

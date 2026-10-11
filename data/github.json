@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-10-04",
+  "generatedAt": "2026-10-11",
   "profile": {
     "login": "tungbq",
     "name": "Tung Leo",
     "avatarUrl": "https://avatars.githubusercontent.com/u/85242618?v=4",
-    "followers": 276,
+    "followers": 277,
     "publicRepos": 251,
-    "totalStars": 2364
+    "totalStars": 2361
   },
   "repos": {
     "AWSHub": {
@@ -169,7 +169,7 @@
     "devops-basics": {
       "name": "devops-basics",
       "description": "🚀 Practical and document place for DevOps toolchain",
-      "stars": 1882,
+      "stars": 1879,
       "forks": 212,
       "language": "Shell",
       "topics": [

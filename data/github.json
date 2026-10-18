@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-10-11",
+  "generatedAt": "2026-10-18",
   "profile": {
     "login": "tungbq",
     "name": "Tung Leo",
     "avatarUrl": "https://avatars.githubusercontent.com/u/85242618?v=4",
     "followers": 277,
     "publicRepos": 251,
-    "totalStars": 2361
+    "totalStars": 2362
   },
   "repos": {
     "AWSHub": {
       "name": "AWSHub",
       "description": "📚 Collection of AWS Services documentation and learning resources ☁️",
-      "stars": 86,
+      "stars": 87,
       "forks": 20,
       "language": "Shell",
       "topics": [
@@ -266,7 +266,7 @@
       "name": "devops-toolkit",
       "description": "🐳 Security-first container image for an all-in-one DevOps environment with popular tools like Ansible, Terraform, kubectl, Helm, AWS CLI, Azure CLI, Git, Python, and more. Pull it and work on your tasks.",
       "stars": 60,
-      "forks": 19,
+      "forks": 20,
       "language": "Python",
       "topics": [
         "ansible",
@@ -286,7 +286,7 @@
         "terraform"
       ],
       "htmlUrl": "https://github.com/tungbq/devops-toolkit",
-      "pushedAt": "2026-09-28T19:14:43Z",
+      "pushedAt": "2026-10-14T01:13:42Z",
       "archived": false,
       "contributors": 9
     },

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-01",
+  "generatedAt": "2026-11-08",
   "profile": {
     "login": "tungbq",
     "name": "Tung Leo",
@@ -169,8 +169,8 @@
     "devops-basics": {
       "name": "devops-basics",
       "description": "🚀 Practical and document place for DevOps toolchain",
-      "stars": 1876,
-      "forks": 213,
+      "stars": 1875,
+      "forks": 214,
       "language": "Shell",
       "topics": [
         "ansible",
@@ -241,7 +241,7 @@
     "devops-project": {
       "name": "devops-project",
       "description": "Collection of DevOps projects to level up your DevOps skills",
-      "stars": 102,
+      "stars": 103,
       "forks": 51,
       "language": "HCL",
       "topics": [
